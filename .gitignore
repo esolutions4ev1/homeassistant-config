@@ -1,6 +1,7 @@
 # HASSIO configuration files
 known_devices.yaml
 secrets.yaml
+plex.conf
 
 # Logs
 *.log
@@ -14,3 +15,6 @@ secrets.yaml
 .storage
 .cloud
 tts
+deps
+
+*.pickle
