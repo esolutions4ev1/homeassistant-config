@@ -2,7 +2,7 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
 
-  # Auth Providers (default: legacy_api_password)
+  # Auth Providers
   auth_providers:
     - type: homeassistant
 
@@ -55,7 +55,6 @@ http:
   base_url: !secret url_base 
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  api_password: !secret email_password_1
 
 # Sensors
 sensor:
