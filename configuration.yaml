@@ -29,8 +29,8 @@ influxdb:
   host: 127.0.0.1
   port: 8086
   database: home_assistant
-  username: admin
-  password: admin
+  username: !secret user_influxdb
+  password: !secret pass_influxdb
 
 frontend:
   themes: !include_dir_merge_named themes
