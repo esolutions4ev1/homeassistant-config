@@ -1,0 +1,17 @@
+  - name: Home
+    latitude: !secret latitude_home
+    longitude: !secret longitude_home
+    radius: 100
+    icon: mdi:home
+    
+  - name: Lutheran High NW
+    latitude: !secret latitude_lnw
+    longitude: !secret longitude_lnw
+    radius: 100
+    icon: mdi:school
+
+  - name: Trinity
+    latitude: !secret latitude_trinity
+    longitude: !secret longitude_trinity
+    radius: 100
+    icon: mdi:school

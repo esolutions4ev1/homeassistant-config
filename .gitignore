@@ -1,0 +1,20 @@
+# HASSIO configuration files
+known_devices.yaml
+secrets.yaml
+plex.conf
+
+# Logs
+*.log
+
+# Databases
+*.db
+*.db-shm
+*.db-wal
+
+# Folders
+.storage
+.cloud
+tts
+deps
+
+*.pickle

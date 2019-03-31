@@ -1,0 +1,27 @@
+# Always have CRLF line endings.
+
+# Text
+*.css          text
+*.html         text
+*.js           text
+.gitignore     text
+.gitattributes text
+
+# Configurations
+*.yaml text
+
+# Documentation
+*.md text
+
+# Media
+*.mp3    binary
+*.gif    binary
+*.jpg    binary
+*.png    binary
+*.svg    binary
+
+# Special binaries
+*.pickle binary
+
+# Archive
+*.zip binary
