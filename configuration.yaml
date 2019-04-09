@@ -44,6 +44,10 @@ panel_iframe:
     title: Grafana
     icon: mdi:chart-pie
     url: !secret url_grafana
+  pihole:
+    title: Pi-hole
+    icon: mdi:pi-box
+    url: !secret url_pihole
 
 # Show the introduction message on startup.
 introduction:
