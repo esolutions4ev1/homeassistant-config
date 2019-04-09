@@ -2,7 +2,7 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
 
-  # Auth Providers (default: legacy_api_password)
+  # Auth Providers
   auth_providers:
     - type: homeassistant
 
@@ -29,8 +29,8 @@ influxdb:
   host: 127.0.0.1
   port: 8086
   database: home_assistant
-  username: admin
-  password: admin
+  username: !secret user_influxdb
+  password: !secret pass_influxdb
 
 frontend:
   themes: !include_dir_merge_named themes
@@ -44,6 +44,10 @@ panel_iframe:
     title: Grafana
     icon: mdi:chart-pie
     url: !secret url_grafana
+  pihole:
+    title: Pi-hole
+    icon: mdi:pi-box
+    url: !secret url_pihole
 
 # Show the introduction message on startup.
 introduction:
@@ -55,7 +59,6 @@ http:
   base_url: !secret url_base 
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  api_password: !secret email_password_1
 
 # Sensors
 sensor:
