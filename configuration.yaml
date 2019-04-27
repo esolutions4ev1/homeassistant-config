@@ -49,9 +49,6 @@ panel_iframe:
     icon: mdi:pi-box
     url: !secret url_pihole
 
-# Show the introduction message on startup.
-introduction:
-
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -99,7 +96,8 @@ weather:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 zone: !include zones.yaml
 group: !include groups.yaml
