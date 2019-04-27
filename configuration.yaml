@@ -36,10 +36,6 @@ frontend:
   themes: !include_dir_merge_named themes
 
 panel_iframe:
-  influxdb:
-    title: InfluxDB
-    icon: mdi:database
-    url: !secret url_influxdb
   grafana:
     title: Grafana
     icon: mdi:chart-pie
