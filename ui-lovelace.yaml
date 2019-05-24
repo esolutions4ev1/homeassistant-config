@@ -1,0 +1,15 @@
+title: Home
+resources:
+  - url: /local/lovelace/lovelace-card-tools/card-tools.js?v=0.4
+    type: js
+  - url: /local/lovelace/lovelace-useful-markdown-card/useful-markdown-card.js?v=1.0
+    type: js
+views:
+  # Touching ui-lovelace required when updating !include files
+  - !include views/overview.yaml
+  - !include views/security.yaml
+  - !include views/convience.yaml
+  - !include views/family.yaml
+  - !include views/finance.yaml
+  - !include views/infrastructure.yaml
+  - !include views/templates.yaml

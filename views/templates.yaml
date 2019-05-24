@@ -1,0 +1,41 @@
+title: Templates
+icon: mdi:infinity
+path: templates
+theme: dark-mode
+cards:
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## @TODO: Example of a regular card showing content
+
+        Normal card layout.
+    - type: markdown
+      content: >
+        ## @TODO: Example of a card in trouble.
+
+        This card is not receiving data or has errored.
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## @TODO: Example of a card being updated
+
+        Small flash or visual indivcator of a card being updated.
+    - type: markdown
+      content: >
+        ## TBD
+
+        TBD
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## TBD
+
+        TBD
+    - type: markdown
+      content: >
+        ## TBD
+
+        TBD

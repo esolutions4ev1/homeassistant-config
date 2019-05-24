@@ -16,5 +16,6 @@ plex.conf
 .cloud
 tts
 deps
+www/lovelace
 
 *.pickle
