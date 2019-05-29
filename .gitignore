@@ -12,10 +12,14 @@ plex.conf
 *.db-wal
 
 # Folders
-.storage
-.cloud
 tts
 deps
 www/lovelace
 
+# Hidden folders
+.storage
+.cloud
+.Trash-0
+
+# Pickled files
 *.pickle
