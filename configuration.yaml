@@ -1,3 +1,17 @@
+
+# @TODO: README.md containing my infrastructure, images, layout, etc...
+# @TODO: PiHole
+# @TODO: Home Panel: News Stream
+# @TODO: Home Pane: Tract Integration
+# @TODO: Useful energy usage chart/report
+# @TODO: Health Integration with Samsung Health
+# @TODO: Health Panel: Steps w/ previous week/month/year comparisons
+# @TODO: Remove "Do you want to save this password" message when logging in.
+# @TODO: TV Guide integration
+# @TODO: Automation: "Aziz light!" - Turn on all lights in the room.
+# @TODO: Administrative: Backup databases.  Disaster recovery.
+# @TODO: Weather Panel:
+# 
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
@@ -59,6 +73,7 @@ http:
 # Sensors
 sensor:
   # Weather prediction
+  # FIXME: yr Symbol for Home badge does not look like it's using current timezone. 
   - platform: yr
   - platform: time_date
     display_options:
@@ -77,11 +92,11 @@ device_tracker:
     password: !secret device_netgear
 
 # Bulbs
-#tuya:
-#  username: !secret email
-#  password: !secret email_password_1
-#  country_code: 1
-#  platform: smart_life
+tuya:
+  username: !secret email
+  password: !secret email_password_1
+  country_code: 1
+  platform: 'tuya'
 
 # Abode
 abode:
