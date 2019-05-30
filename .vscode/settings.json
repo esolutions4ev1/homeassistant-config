@@ -1,0 +1,13 @@
+{
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.ts",
+        "**/*.md",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    },
+}
