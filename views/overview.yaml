@@ -10,27 +10,13 @@ cards:
       content: >
         [[ sensor.date_time ]]
 
-    - type: markdown
-      content: >
-        ## @TODO: Calendar
-
-        Calendar Item 5555555555555555
-
-        Calendar Item 2
-
-        Calendar Item 3
-
-        Calendar Item 4
-
-        Calendar Item 5
-        
+    - type: custom:calendar-card
+      entities:
+        - calendar.family
   - type: vertical-stack
     cards:
-    - type: markdown
-      content: >
-        ## @TODO: Weather
-
-        Current and weekly weather from Darksky
+    - type: weather-forecast
+      entity: weather.weather
     - type: markdown
       content: >
         ## @TODO: Wind
@@ -43,8 +29,5 @@ cards:
         ## Lovelace
 
         Starting with Home Assistant 0.72, we're experimenting with a new way of defining your interface. We're calling it the **Lovelace UI**.
-    - type: markdown
-      content: >
-        ## Lovelace2
 
-        Starting with Home Assistant 0.72, we're experimenting with a new way of defining your interface. We're calling it the **Lovelace UI**.
+    - type: custom:tracker-card

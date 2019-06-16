@@ -36,11 +36,15 @@ homeassistant:
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 config:
-          
+
 default_config:
 
 lovelace:
   mode: yaml
+
+custom_updater:
+  card_urls:
+    - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
 
 influxdb:
   host: 127.0.0.1
@@ -80,6 +84,39 @@ sensor:
       - 'time'
       - 'date'
       - 'date_time'
+  - platform: darksky
+    api_key: !secret api_darksky
+    forecast:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    monitored_conditions:
+      - icon
+      - summary
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - humidity
+      - temperature
+      - temperature_high
+      - temperature_low
+      - apparent_temperature
+      - apparent_temperature_high
+      - apparent_temperature_low
+      - wind_speed
+      - wind_bearing
+      - precip_type
+      - precip_probability
+      - precip_accumulation
+      - precip_intensity
+      - precip_intensity_max
+      - uv_index
+      - daily_summary
+      - pressure
+      - visibility
+    update_interval:
+      minutes: 5
 ## Zigbee shut off in January by DTE for version 2.  Currently running both bridges with
 ## v1 reporting to hassio and v2 reporting to the DTE Insight app.
   - platform: dte_energy_bridge
@@ -106,6 +143,8 @@ abode:
 # Weather
 weather:
   - platform: darksky
+    name: Weather
+    units: us
     api_key: !secret api_darksky
 
 # Text to speech
@@ -117,3 +156,8 @@ zone: !include zones.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+# Google Calendar
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret

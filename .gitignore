@@ -3,6 +3,9 @@ known_devices.yaml
 secrets.yaml
 plex.conf
 
+# Data Mappings
+CONFIG.md
+
 # Logs
 *.log
 
@@ -16,10 +19,11 @@ tts
 deps
 www/lovelace
 
-# Hidden folders
+# Hidden files and folders
 .storage
 .cloud
 .Trash-0
+.google.token
 
 # Pickled files
 *.pickle

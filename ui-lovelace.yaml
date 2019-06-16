@@ -4,6 +4,12 @@ resources:
     type: js
   - url: /local/lovelace/lovelace-useful-markdown-card/useful-markdown-card.js?v=1.0
     type: js
+  - url: /customcards/github/custom-cards/tracker-card.js?track=true
+    type: module
+  - url: https://unpkg.com/moment@2.22.2/moment.js
+    type: js
+  - url: /local/lovelace/homeassistant-lovelace-google-calendar-card/calendar-card.js?v=1.0.1
+    type: module
 views:
   # Touching ui-lovelace required when updating !include files
   - !include views/overview.yaml
