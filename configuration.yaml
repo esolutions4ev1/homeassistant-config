@@ -115,13 +115,11 @@ sensor:
       - daily_summary
       - pressure
       - visibility
-    update_interval:
-      minutes: 5
 ## Zigbee shut off in January by DTE for version 2.  Currently running both bridges with
 ## v1 reporting to hassio and v2 reporting to the DTE Insight app.
-  - platform: dte_energy_bridge
-    ip: 192.168.1.35
-    version: 1
+#  - platform: dte_energy_bridge
+#    ip: 192.168.1.35
+#    version: 1
 
 # Device Trackers
 device_tracker:
