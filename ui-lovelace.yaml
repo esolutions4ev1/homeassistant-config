@@ -1,9 +1,7 @@
 title: Home
 resources:
-  - url: /local/lovelace/lovelace-card-tools/card-tools.js?v=0.4
-    type: js
-  - url: /local/lovelace/lovelace-useful-markdown-card/useful-markdown-card.js?v=1.0
-    type: js
+  - url: /local/lovelace/lovelace-markdown-mod/markdown-mod.js?v=1.0
+    type: module
   - url: /customcards/github/custom-cards/tracker-card.js?track=true
     type: module
   - url: https://unpkg.com/moment@2.22.2/moment.js
@@ -18,4 +16,3 @@ views:
   - !include views/family.yaml
   - !include views/finance.yaml
   - !include views/infrastructure.yaml
-  - !include views/templates.yaml

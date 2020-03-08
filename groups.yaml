@@ -1,0 +1,13 @@
+dining_room:
+  name: Dining Room Lights
+  entities:
+    - light.dining_room_lamp_n
+    - light.dining_room_lamp_c
+    - light.dining_room_lamp_s
+bar:
+  name: Bar Lights
+  entities:
+    - light.bar_lamp_ne
+    - light.bar_lamp_nw
+    - light.bar_lamp_se
+    - light.bar_lamp_sw
