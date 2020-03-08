@@ -1,9 +1,78 @@
 - id: letsencrypt-renewal
-  alias: "Let's Encrypt Renewal"
+  alias: Let's Encrypt Renewal
   trigger:
   - platform: time
-    at: '00:00:00'
+    at: 00:00:00
   action:
   - service: hassio.addon_restart
     data:
       addon: core_letsencrypt
+- id: enter-office
+  alias: Turn the lights on when heading to the bar
+  trigger:
+    platform: state
+    entity_id: binary_sensor.occupancy_office
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: group.bar
+    state: 'off'
+  action:
+  - service: light.turn_on
+    entity_id: group.bar
+    data:
+      brightness: 255
+      transition: 2
+      rgb_color:
+      - 255
+      - 255
+      - 255
+  - delay: 00:04:00
+  - service: light.turn_off
+    entity_id: group.bar
+##############################################
+- id: halloween-sound-when-near
+  alias: Loud bang sound when someone is near and red lights in garage.
+  trigger:
+  - entity_id: binary_sensor.occupancy_1st_floor
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.landscape_front
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.basement_speaker
+      media_content_id: http://soundbible.com/mp3/Loud_Bang-Osama_Bin_Laden-925764326.mp3
+      media_content_type: audio/mp3
+  - delay: 00:00:01
+  - service: light.turn_on
+    entity_id: 
+      - light.bar_lamp_ne
+      - light.bar_lamp_se
+    data:
+      brightness: 255
+      transition: 4
+      rgb_color:
+      - 255
+      - 0
+      - 0
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.basement_speaker
+      media_content_id: http://soundbible.com/mp3/Zombie%20Come%20Here-SoundBible.com-1731145186.mp3
+      media_content_type: audio/mp3
+  - delay: 00:00:02
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.basement_speaker
+      media_content_id: http://soundbible.com/mp3/I%20Want%20Brains-SoundBible.com-814171004.mp3
+      media_content_type: audio/mp3
+  - delay: 00:00:07
+  - service: light.turn_off
+    entity_id: 
+      - light.bar_lamp_ne
+      - light.bar_lamp_se
+  - service: switch.turn_on
+    entity_id: switch.landscape_front
