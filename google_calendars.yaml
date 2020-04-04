@@ -1,0 +1,48 @@
+- cal_id: ub0939f1d1toe12c6v5d82mf6s@group.calendar.google.com
+  entities:
+  - device_id: family
+    ignore_availability: true
+    name: Family
+    track: true
+
+- cal_id: sutcliffe.graham@gmail.com
+  entities:
+  - device_id: sutcliffe_graham_gmail_com
+    ignore_availability: true
+    name: sutcliffe.graham@gmail.com
+    track: true
+
+- cal_id: 8i5g0hvbp8ok2332nh6vm44hf8@group.calendar.google.com
+  entities:
+  - device_id: detroit_lions
+    ignore_availability: true
+    name: Detroit Lions
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: true
+
+- cal_id: nfl_8_%44etroit+%4cions#sports@group.v.calendar.google.com
+  entities:
+  - device_id: detroit_lions
+    ignore_availability: true
+    name: Detroit Lions
+    track: true
+
+- cal_id: kme5iip2ehevovqdvjom1v3et8@group.calendar.google.com
+  entities:
+  - device_id: paymo_my_tasks
+    ignore_availability: true
+    name: Paymo - my tasks
+    track: true

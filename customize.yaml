@@ -1,0 +1,6 @@
+device_tracker.Nest_Hello_85c0:
+  friendly_name: Nest Doorbell
+light.lamp_1_2:
+  hidden: true
+light.lamp_2_2:
+  hidden: true

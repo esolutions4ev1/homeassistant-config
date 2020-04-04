@@ -1,9 +1,5 @@
 title: Home
 resources:
-  - url: /local/lovelace/lovelace-markdown-mod/markdown-mod.js?v=1.0
-    type: module
-  - url: /customcards/github/custom-cards/tracker-card.js?track=true
-    type: module
   - url: https://unpkg.com/moment@2.22.2/moment.js
     type: js
   - url: /local/lovelace/homeassistant-lovelace-google-calendar-card/calendar-card.js?v=1.0.1

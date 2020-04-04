@@ -5,7 +5,7 @@ theme: dark-mode
 cards:
   - type: vertical-stack
     cards:
-    - type: custom:useful-markdown-card
+    - type: markdown
       title: Time
       content: >
         [[ sensor.date_time ]]
@@ -29,5 +29,3 @@ cards:
         ## Lovelace
 
         Starting with Home Assistant 0.72, we're experimenting with a new way of defining your interface. We're calling it the **Lovelace UI**.
-
-    - type: custom:tracker-card

@@ -1,17 +1,3 @@
-
-# @TODO: README.md containing my infrastructure, images, layout, etc...
-# @TODO: PiHole
-# @TODO: Home Panel: News Stream
-# @TODO: Home Pane: Tract Integration
-# @TODO: Useful energy usage chart/report
-# @TODO: Health Integration with Samsung Health
-# @TODO: Health Panel: Steps w/ previous week/month/year comparisons
-# @TODO: Remove "Do you want to save this password" message when logging in.
-# @TODO: TV Guide integration
-# @TODO: Automation: "Aziz light!" - Turn on all lights in the room.
-# @TODO: Administrative: Backup databases.  Disaster recovery.
-# @TODO: Weather Panel:
-# 
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
@@ -42,10 +28,6 @@ default_config:
 lovelace:
   mode: yaml
 
-custom_updater:
-  card_urls:
-    - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
-
 influxdb:
   host: 127.0.0.1
   port: 8086
@@ -56,16 +38,6 @@ influxdb:
 frontend:
   themes: !include_dir_merge_named themes
 
-panel_iframe:
-  grafana:
-    title: Grafana
-    icon: mdi:chart-pie
-    url: !secret url_grafana
-  pihole:
-    title: Pi-hole
-    icon: mdi:pi-box
-    url: !secret url_pihole
-
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -73,6 +45,10 @@ http:
   base_url: !secret url_base 
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
+
+pi_hole:
+  host: localhost:4865
+  name: My Pi-Hole
 
 # Sensors
 sensor:
@@ -118,7 +94,7 @@ sensor:
 ## Zigbee shut off in January by DTE for version 2.  Currently running both bridges with
 ## v1 reporting to hassio and v2 reporting to the DTE Insight app.
 #  - platform: dte_energy_bridge
-#    ip: 192.168.1.35
+#    ip: xx.xx.xx.xx
 #    version: 1
 
 # Device Trackers
@@ -132,6 +108,8 @@ tuya:
   password: !secret email_password_1
   country_code: 1
   platform: 'tuya'
+tplink:
+  discovery: true
 
 # Abode
 abode:
@@ -150,8 +128,8 @@ tts:
   - platform: google_translate
     service_name: google_say
 
-zone: !include zones.yaml
-group: !include groups.yaml
+zone: !include zones.yaml 
+group: !include groups.yaml 
 automation: !include automations.yaml
 script: !include scripts.yaml
 
@@ -159,3 +137,4 @@ script: !include scripts.yaml
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
+
